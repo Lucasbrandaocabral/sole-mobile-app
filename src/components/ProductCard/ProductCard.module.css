@@ -1,0 +1,274 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  transform-style: flat;
+  will-change: transform;
+  border-radius: 20px;
+  transition: border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: #ff4d0059;
+}
+
+.imgWrap {
+  aspect-ratio: 1;
+  cursor: pointer;
+  background: var(--bg3);
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.imgWrap:hover .img {
+  transform: scale(1.06);
+}
+
+.hoverImg {
+  object-fit: cover;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.imgWrap:hover .hoverImg {
+  opacity: 1;
+}
+
+.tag {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1;
+  border-radius: 100px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.discount {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  z-index: 1;
+  background: #ff4d0026;
+  border-radius: 100px;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: 14px;
+  right: 50px;
+}
+
+.like {
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  width: 36px;
+  height: 36px;
+  color: var(--text2);
+  border: 1px solid var(--border);
+  z-index: 1;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.like:hover,
+.liked {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.info {
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px 20px;
+  display: flex;
+}
+
+.topRow {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.brand {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text2);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.rating {
+  color: var(--text2);
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  display: flex;
+}
+
+.reviews {
+  opacity: 0.6;
+  font-size: 11px;
+}
+
+.name {
+  letter-spacing: -0.3px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: color 0.2s;
+}
+
+.name:hover {
+  color: var(--accent);
+}
+
+.colors {
+  gap: 6px;
+  display: flex;
+}
+
+.colorDot {
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.bottom {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  display: flex;
+}
+
+.priceGroup {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.price {
+  letter-spacing: -0.5px;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.original {
+  color: var(--text2);
+  font-size: 13px;
+  text-decoration: line-through;
+}
+
+.addBtn {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  transition: all 0.25s;
+  display: flex;
+}
+
+.addBtn:hover {
+  background: var(--accent2);
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px #ff4d0066;
+}
+
+.shine {
+  z-index: 5;
+  pointer-events: none;
+  border-radius: 20px;
+  transition: background 80ms linear;
+  position: absolute;
+  inset: 0;
+}
+
+@media (width <= 768px) {
+  .card {
+    border-radius: 14px;
+  }
+
+  .tag {
+    font-size: 9px;
+    padding: 4px 8px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .like {
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .info {
+    padding: 10px 10px 12px;
+    gap: 6px;
+  }
+
+  .brand {
+    font-size: 9px;
+  }
+
+  .name {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .original {
+    font-size: 11px;
+  }
+
+  .colors {
+    display: none;
+  }
+
+  .rating {
+    font-size: 11px;
+  }
+
+  .addBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .shine {
+    border-radius: 14px;
+  }
+}

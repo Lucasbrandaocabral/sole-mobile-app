@@ -1,0 +1,14 @@
+{
+  "appId": "com.lucasbrandao.sole",
+  "appName": "SOLE",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": true,
+    "backgroundColor": "#0a0a0a"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

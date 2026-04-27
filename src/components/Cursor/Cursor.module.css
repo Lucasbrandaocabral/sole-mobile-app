@@ -1,0 +1,34 @@
+.dot {
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 99999;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  transform: translate(var(--cx, 0px), var(--cy, 0px));
+  transition: transform 0.05s linear;
+}
+
+.ring {
+  pointer-events: none;
+  z-index: 99998;
+  border: 1.5px solid #ff4d008c;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  top: -18px;
+  left: -18px;
+  transform: translate(var(--rx, 0px), var(--ry, 0px));
+  transition: transform 0.12s ease-out;
+}
+
+@media (width <= 768px) {
+  .dot,
+  .ring {
+    display: none;
+  }
+}

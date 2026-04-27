@@ -1,0 +1,133 @@
+.footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 80px 40px 40px;
+}
+
+.top {
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  display: grid;
+}
+
+.logo {
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  font-size: 32px;
+  font-weight: 800;
+  display: block;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.brand p {
+  color: var(--text2);
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.socials {
+  gap: 12px;
+  display: flex;
+}
+
+.socials a {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  width: 40px;
+  height: 40px;
+  color: var(--text2);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  display: flex;
+}
+
+.socials a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.col {
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+}
+
+.col h4 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text2);
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.col a {
+  color: var(--text2);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.col a:hover {
+  color: var(--text);
+}
+
+.bottom {
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 32px;
+  display: flex;
+}
+
+.bottom span {
+  color: var(--text2);
+  font-size: 13px;
+}
+
+.policies {
+  gap: 24px;
+  display: flex;
+}
+
+.policies a {
+  color: var(--text2);
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.policies a:hover {
+  color: var(--text);
+}
+
+@media (width <= 768px) {
+  .footer {
+    padding: 60px 20px calc(32px + 80px + env(safe-area-inset-bottom));
+  }
+
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
