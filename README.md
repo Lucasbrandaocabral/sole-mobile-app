@@ -69,7 +69,6 @@ Alternância de tema via Navbar com variáveis CSS.
 ```
 src/
 ├── components/
-│   ├── Navbar/          # Barra superior com busca e tema
 │   ├── Hero/            # Banner principal
 │   ├── BrandsBanner/    # Carrossel de marcas
 │   ├── Featured/        # Produtos em destaque
