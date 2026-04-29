@@ -86,7 +86,3 @@ src/
 └── data/
     └── products.js
 ```
-
----
-
-Made by [Lucas Brandão](https://github.com/Lucasbrandaocabral)
